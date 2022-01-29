@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
+<div id="menu" th:fragment="navBar">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <h2 class="navbar-band" href="/" style="color: crimson">Koard</h2>
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarsExample03"
+                aria-controls="navbarsExample03"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon" />
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample03">
+            <div class="container">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Kotlin 연습용 게시판 애플리케이숀!</a>
+                    </li>
+                </ul>
+            </div>
+            <form class="form-inline my-2 my-md-0">
+                <ul class="navbar-nav mr-auto">
+                    <!-- 비로그인 접속 시 -->
+                    <li class="nav-item" sec:authorize="isAnonymous()">
+                        <a class="nav-link" th:href="@{/login}">LOGIN</a>
+                    </li>
+                    <li class="nav-item" sec:authorize="isAnonymous()">
+                        <a class="nav-link" th:href="@{/register}">REGISTER</a>
+                    </li>
+                    <!-- 로그인 접속 시 -->
+                    <li class="nav-item" sec:authorize="isAuthenticated()">
+                        <a class="nav-link" href="#" sec:authentication="name">유저</a>
+                    </li>
+                    <li class="nav-item" sec:authorize="isAuthenticated()">
+                        <a class="nav-link" th:href="@{/logout}">LOGOUT</a>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </nav>
+</div>
+</html>

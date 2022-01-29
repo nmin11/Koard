@@ -1,9 +1,6 @@
 package practice.kotlin.koard.entity
 
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.GenerationType
-import javax.persistence.Id
+import javax.persistence.*
 
 @Entity
 class User (nickname: String, password: String) {
@@ -11,4 +8,8 @@ class User (nickname: String, password: String) {
     var id: Long? = null
     var nickname: String = nickname
     var password: String = password
+    @OneToMany(mappedBy = "user", cascade = [CascadeType.ALL])
+    var boards: MutableList<Board> = mutableListOf()
+    @OneToMany(mappedBy = "user", cascade = [CascadeType.ALL])
+    var comments: MutableList<Comment> = mutableListOf()
 }
