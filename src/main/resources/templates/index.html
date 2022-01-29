@@ -2,29 +2,9 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments/header :: header"/>
 <body>
-<div th:replace="fragments/navBar :: navBar" />
+<div th:replace="fragments/nav_bar :: nav_bar" />
 <div class="container">
-    <div>
-        <table class="table table-striped">
-            <thead>
-            <tr>
-                <th>#</th>
-                <th>제목</th>
-                <th>작성자</th>
-                <th>조회수</th>
-                <th>댓글수</th>
-            </tr>
-            </thead>
-            <tbody> <tr th:each="board : ${boards}">
-                <td th:text="${board.id}"></td>
-                <td th:text="${board.title}"></td>
-                <td th:text="${board.user.nickname}"></td>
-                <td th:text="${board.hit}"></td>
-                <td th:text="${board.comments.size()}"></td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
+    <h1 class="description">Kotlin 연습용 게시판 애플리케이숀!</h1>
 </div>
 </body>
 </html>

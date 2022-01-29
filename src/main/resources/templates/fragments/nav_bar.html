@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
-<div id="menu" th:fragment="navBar">
+<div id="menu" th:fragment="nav_bar">
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-        <h2 class="navbar-band" href="/" style="color: crimson">Koard</h2>
+        <h2 class="navbar-band" href="/"><a href="/">Koard</a></h2>
         <button
                 class="navbar-toggler"
                 type="button"
@@ -19,7 +19,7 @@
             <div class="container">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/">Kotlin 연습용 게시판 애플리케이숀!</a>
+                        <a class="nav-link" href="/board/1">게시판 이동</a>
                     </li>
                 </ul>
             </div>
