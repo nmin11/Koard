@@ -1,0 +1,116 @@
+.wrap {
+    height: 100%;
+    width: 100%;
+    background-image: url(/static/img/background.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+.form-wrap {
+    width: 380px;
+    height: 600px;
+    position: relative;
+    margin: 4% auto;
+    background: #fff;
+    padding: 5px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+#form-name {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    top: 180px;
+    position: absolute;
+    width: 180px;
+    transition: .5s;
+}
+
+.input-field {
+    width: 90%;
+    padding: 10px 0;
+    margin: 5px 0;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+.submit {
+    width: 75%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.checkbox {
+    margin: 30px 10px 30px 0;
+}
+
+#login {
+    margin-top: 60px;
+    top: 120px;
+    left: 0px;
+}
+
+#register {
+    margin-top: 30px;
+    top: 0px;
+    left: 0px;
+}
+
+.romance {
+    font-weight: bold;
+    color: #ffb6c1;
+}
+
+.activity {
+    font-weight: bold;
+    color: #87cefa;
+}
+
+.landscape {
+    font-weight: bold;
+    color: #00ff7f;
+}
+
+.alone {
+    font-weight: bold;
+    color: #20b2aa;
+}
+
+.trekking {
+    font-weight: bold;
+    color: #228b22;
+}
+
+.food {
+    font-weight: bold;
+    color: #ffa07a;
+}
+
+.luxury {
+    font-weight: bold;
+    color: #4b0082;
+}
+
+.fieldError {
+    border-color: #ff0000;
+}
+
+.errors {
+    margin-left: 10px;
+    color: #ff0000;
+    font-weight: bold;
+}

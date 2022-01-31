@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header"/>
+<body>
+<div th:replace="fragments/nav_bar :: nav_bar" />
+<div class="wrap">
+
+    <div class="form-wrap">
+
+        <div class="col-md-12 text-center" id="form-name">
+            <h3>회원가입</h3>
+        </div>
+
+        <form id="register" th:action="@{/user/signup}" th:object="${dto}" method="post" class="input-group">
+            <input type="text" th:field="*{nickname}" class="input-field" placeholder="닉네임을 입력해주세요"
+                   th:class="${#fields.hasErrors('nickname')}? 'input-field fieldError' : 'input-field'" required>
+            <p th:if="${#fields.hasErrors('nickname')}" th:errors="*{nickname}" class="errors">중복된 닉네임입니다.</p>
+            <input type="password" th:field="*{password}" class="input-field" placeholder="비밀번호를 입력해주세요" required>
+            <button class="submit">REGISTER</button>
+        </form>
+
+    </div>
+
+</div>
+<script src="/js/join_form.js" type="text/javascript"></script>
+</body>
+</html>
