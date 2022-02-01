@@ -1,8 +1,10 @@
 package practice.kotlin.koard.entity
 
+import lombok.Getter
 import javax.persistence.*
 
 @Entity
+@Getter
 class User (nickname: String, password: String) {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long? = null

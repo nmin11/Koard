@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments/header :: header"/>
+<head th:replace="fragment/header :: header"/>
 <body>
-<div th:replace="fragments/nav_bar :: nav_bar" />
+<div th:replace="fragment/nav_bar :: nav_bar" />
 <div class="wrap">
 
     <div class="form-wrap">
@@ -20,11 +20,17 @@
         </div>
 
         <form id="login" th:action="@{/login}" method="post" class="input-group">
-            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
             <input type="text" class="input-field" name="username" placeholder="닉네임을 입력해주세요" required>
             <input type="password" class="input-field" name="password" placeholder="비밀번호를 입력해주세요" required>
             <button class="submit">LOGIN</button>
         </form>
+        <br/>
+        <br/>
+        <a href="/oauth2/authorization/google">Google Login</a>
+        <br/>
+        <a href="/oauth2/authorization/facebook">Facebook Login</a>
+        <br/>
+        <a href="/oauth2/authorization/naver">Naver Login</a>
 
     </div>
 
